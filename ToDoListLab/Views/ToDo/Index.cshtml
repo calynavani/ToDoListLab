@@ -1,0 +1,18 @@
+﻿@model EmployeeTaskViewModel
+
+<h2>Tasks</h2>
+
+@foreach (ToDo td in Model.ToDos)
+{
+    <p>
+        @td.Name
+        <ul>
+            <li>@td.HoursNeeded</li>
+            <li>@td.IsCompleted</li>
+        </ul>
+
+    </p>
+}
+
+<a asp-area="" asp-controller="ToDo" asp-action="AssignTask">Assign Task</a>
+

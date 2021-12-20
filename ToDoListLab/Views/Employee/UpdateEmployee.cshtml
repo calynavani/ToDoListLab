@@ -1,0 +1,25 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "UpdateEmployee";
+}
+
+<h1>Update Employee</h1>
+
+<form asp-action="UpdateEmployee" method="post">
+
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" value="@Model.Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+    <label asp-for="HoursAvailible" class="control-label"></label>
+    <input asp-for="HoursAvailible" class="form-control" value="@Model.HoursAvailible" />
+    <span asp-validation-for="HoursAvailible" class="text-danger"></span>
+
+    <label asp-for="Title" class="control-label"></label>
+    <input asp-for="Title" class="form-control" value="@Model.Title" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+
+
+    <input style="background-color: orange; color: white; border-style: none;  border-radius: 70%" asp-action="UpdateEmployee" asp-controller="Employee" type="submit" />
+</form>
+

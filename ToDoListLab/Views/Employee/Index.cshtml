@@ -1,0 +1,16 @@
+﻿@model EmployeeTaskViewModel
+
+
+<h2>Employees</h2>
+@foreach(Employee e in Model.Employees)
+            {
+                <p>                
+                        @e.Name
+                    <ul>
+                        <li>Employee Id: @e.Id</li>
+                        <li>Title: @e.Title</li>
+                        <li>Hours Available: @e.HoursAvailible</li>
+                    </ul>                  
+                </p> 
+
+            }
